@@ -15,15 +15,15 @@
   </head>
   <body>
     <div>
-      <div id="snow"></div>
-      <h1>Merry Christmas</h1>
-      <div class="tree">
+      <div id="snow" class="snow show"></div>
+      <h1 class="text show">Merry Christmas</h1>
+      <div class="tree show">
         <img
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/tree.svg"
           width="200px"
         />
       </div>
-      <div class="fox">
+      <div class="fox show">
         <img
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/critters.svg"
           width="300px"
@@ -31,5 +31,26 @@
       </div>
     </div>
     <script src="./script.js"></script>
+    <script>
+      let text = document.querySelector(".text.show");
+      let snow = document.querySelector(".snow.show");
+      let tree = document.querySelector(".tree.show");
+      let fox = document.querySelector(".fox.show");
+      setTimeout(() => {
+        snow.classList.remove("show");
+      }, [6000]);
+      setTimeout(() => {
+        tree.classList.remove("show");
+      }, [12000]);
+      setTimeout(() => {
+        fox.classList.remove("show");
+      }, [18000]);
+      setTimeout(() => {
+        text.classList.remove("show");
+      }, [24000]);
+      setTimeout(() => {
+        document.title = "Merry Christmas";
+      }, [24000]);
+    </script>
   </body>
 </html>
