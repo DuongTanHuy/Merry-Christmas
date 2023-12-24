@@ -16,7 +16,7 @@
   <body>
     <div>
       <div id="snow" class="snow show"></div>
-      <h1 class="text show">Merry Christmas</h1>
+      <h1 class="text">Wait a second</h1>
       <div class="tree show">
         <img
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/tree.svg"
@@ -32,10 +32,16 @@
     </div>
     <script src="./script.js"></script>
     <script>
-      let text = document.querySelector(".text.show");
+      let text = document.querySelector(".text");
       let snow = document.querySelector(".snow.show");
       let tree = document.querySelector(".tree.show");
       let fox = document.querySelector(".fox.show");
+      setTimeout(() => {
+        text.classList.add("show");
+      }, 2000);
+      setTimeout(() => {
+        text.innerText = "Merry Christmas";
+      }, 3000);
       setTimeout(() => {
         snow.classList.remove("show");
       }, [6000]);
