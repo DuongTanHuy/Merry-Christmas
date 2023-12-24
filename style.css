@@ -138,7 +138,7 @@ h1,
 .tree,
 .fox {
   opacity: 1;
-  transition: opacity 0.6s ease-in;
+  transition: all 0.6s ease-in;
 }
 
 .snow.show,
@@ -146,4 +146,12 @@ h1.show,
 .tree.show,
 .fox.show {
   opacity: 0;
+}
+
+.tree.show {
+  transform: translateX(50%);
+}
+
+.fox.show {
+  transform: translateX(-50%);
 }
