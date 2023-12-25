@@ -15,6 +15,7 @@
   </head>
   <body>
     <div>
+      <div class="audio" style="opacity: 0"></div>
       <div id="snow" class="snow show"></div>
       <h1 class="text">Wait a second</h1>
       <div class="tree show">
@@ -36,6 +37,7 @@
       let snow = document.querySelector(".snow.show");
       let tree = document.querySelector(".tree.show");
       let fox = document.querySelector(".fox.show");
+      let audio = document.querySelector(".audio");
       setTimeout(() => {
         text.classList.add("show");
       }, 2000);
@@ -53,9 +55,9 @@
       }, [18000]);
       setTimeout(() => {
         text.classList.remove("show");
-      }, [24000]);
-      setTimeout(() => {
         document.title = "Merry Christmas";
+        audio.innerHTML =
+          '<audio controls autoplay loop><source src="./music.mp3" type="audio/mpeg">Trình duyệt của bạn không hỗ trợ thẻ audio.</audio>';
       }, [24000]);
     </script>
   </body>
